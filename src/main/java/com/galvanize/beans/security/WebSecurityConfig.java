@@ -46,7 +46,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers(HttpMethod.GET, "/user").hasRole("USER")
                 .antMatchers( "/api/users/{alias}").permitAll()
                 // Everything else requires authentication
-                .anyRequest().authenticated();
+//                .anyRequest().authenticated();
+                .anyRequest().permitAll();
     }
 
     @Bean
